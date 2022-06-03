@@ -1,0 +1,10 @@
+name: front-end
+recipe: laravel
+config:
+  php: 8.1
+  database: mysql
+  via: apache
+  webroot: ./public
+services:
+  phpmyadmin:
+    type: phpmyadmin
