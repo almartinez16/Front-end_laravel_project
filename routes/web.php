@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\App;
+use App\Http\Controllers\Comparator\SmartphoneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route::get()
+Route::get('/phone-list', [SmartphoneController::class, 'showList']);
 
