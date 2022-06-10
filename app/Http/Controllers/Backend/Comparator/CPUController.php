@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend\Comparator;
 
 use App\Http\Controllers\Controller;
-use App\Models\Admin;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class CPUController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $response = Http::get('http://apirest-comparator.lndo.site/phone/');
-
-        $phone_list = json_decode($response, true);
-
-        return $phone_list['details'];
+        //
     }
 
     /**
@@ -46,30 +41,21 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Admin  $admin
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Admin $admin)
+    public function show($id)
     {
-        $phone_detailed_list = $this->showDetailedList();
-        
-        $phone_name_list = [];
-
-        for ($i=0;$i<count($phone_detailed_list);$i++)
-        {
-            $phone_name_list[$i] = $phone_detailed_list[$i]['Smartphone'];
-        }
-
-        return $phone_name_list;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Admin  $admin
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Admin $admin)
+    public function edit($id)
     {
         //
     }
@@ -78,10 +64,10 @@ class AdminController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Admin  $admin
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Admin $admin)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -89,10 +75,10 @@ class AdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Admin  $admin
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Admin $admin)
+    public function destroy($id)
     {
         //
     }
