@@ -56,7 +56,9 @@ class SmartphoneController extends Controller
             if ($phone_name == $phone_details[$i]['Smartphone']) {
                 return $phone_details[$i];
             }
-           
+           else {
+                return "Phone was not found.";
+           }
         }
 
     }

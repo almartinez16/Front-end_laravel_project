@@ -35,6 +35,5 @@ Route::get('/search/{phone}', [SmartphoneController::class, 'searchPhone'])
     ->name('search')
     ->where('search', '.*');
 
-// Route::resource(AdminController::class)->group(function () {
-//     //Route::get('')
-// })->middleware('auth');
+
+//Route::

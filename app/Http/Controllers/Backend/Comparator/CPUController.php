@@ -14,7 +14,11 @@ class CPUController extends Controller
      */
     public function index()
     {
-        //
+        response = Http::get('http://apirest-comparator.lndo.site/cpu/');
+
+        $cpu_index = json_decode($response, true);
+
+        return $cpu_index['details'];
     }
 
     /**
@@ -46,7 +50,11 @@ class CPUController extends Controller
      */
     public function show($id)
     {
-        //
+        response = Http::get('http://apirest-comparator.lndo.site/cpu/'.$id);
+
+        $cpu_show = json_decode($response, true);
+
+        return $cpu_show['details'];
     }
 
     /**
